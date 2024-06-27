@@ -30,80 +30,48 @@ Ensure you have the following installed on your local machine:
 - PostgreSQL
 - Git
 
-### Clone the Repository
+### Getting Started
 
-```bash
-git clone https://github.com/yourusername/pern-todo-app.git
-cd pern-todo-app
-Setup the Server
-Navigate to the server directory:
+To run the application locally, follow these steps:
+
+Clone the repository:
 
 bash
+Copy code
+git clone https://github.com/your-username/productivity-app.git
+cd productivity-app
+Install dependencies:
+
+bash
+Copy code
+
+# Install server dependencies
 cd server
-Install server dependencies:
-
-bash
 npm install
-Create a .env file in the server directory with the following content:
 
-env
-PORT=5000
-PGUSER=your_postgres_user
-PGHOST=localhost
-PGDATABASE=your_database_name
-PGPASSWORD=your_postgres_password
-PGPORT=5432
-JWTSECRET=your_jwt_secret
-Create the PostgreSQL database and tables:
-
-sql
-CREATE DATABASE your_database_name;
-\c your_database_name;
-
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  username VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE tasks (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id),
-  task_name VARCHAR(255) NOT NULL,
-  task_id SERIAL
-);
-
-CREATE TABLE sessions (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id),
-  session_date DATE NOT NULL,
-  duration_minutes INTEGER NOT NULL
-);
-Start the server:
-
-bash
-npm start
-Setup the Client
-Navigate to the client directory:
-
-bash
+# Install client dependencies
 cd ../client
-Install client dependencies:
-
-bash
 npm install
-Start the client:
+Set up environment variables:
+
+Create a .env file in the server directory with the following variables:
+env
+Copy code
+JWT_SECRET=your_jwt_secret_here
+POSTGRES_PASSWORD=your_postgres_password_here
+Ensure not to commit this file to version control by adding it to .gitignore.
+Run the application:
 
 bash
-
+Copy code
+# Start the server
+cd ../server
 npm start
-Usage
-Open your browser and navigate to http://localhost:3000.
-Register a new account or log in with an existing account.
-Add, delete, and manage your tasks.
-Use the timer feature to enhance productivity.
-View your history of study sessions.
+
+# Start the client (in a separate terminal)
+cd ../client
+npm start
+Access the application:
+Open your browser and navigate to http://localhost:3000 to use the Productivity Application.
 
 
-
-```
