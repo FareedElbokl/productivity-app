@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #30384b;
+}
+
+/*LOGIN PAGE START*/
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 440px;
+  height: 420px;
+  padding: 30px;
+  background-color: #d1d1d1;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.1);
+}
+.login-header {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+.login-header h1 {
+  color: #333;
+  font-size: 30px;
+  font-weight: 600;
+}
+.input-box .input-field {
+  width: 100%;
+  height: 60px;
+  font-size: 17px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: 0.3s;
+}
+::placeholder {
+  font-weight: 350;
+  color: #222;
+}
+.input-field:focus {
+  width: 105%;
+}
+.forgot {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+section {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+#check {
+  margin-right: 10px;
+}
+.reset-password-link,
+.register-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.reset-password-link:hover {
+  transform: translateY(-3.2px);
+}
+
+.register-link:hover {
+  transform: translateY(-3.2px);
+}
+
+.reset-password-link {
+  transition: transform 0.3s ease-in-out;
+}
+section .reset-password-link,
+section .register-link {
+  color: #333;
+}
+.input-submit {
+  position: relative;
+}
+.submit-btn {
+  width: 100%;
+  height: 60px;
+  background: #222;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.input-submit label {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: #000;
+  transform: scale(1.05, 1);
+}
+.sign-up-link {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 20px;
+}
+.sign-up-link .register-link {
+  color: #333;
+  font-weight: 600;
+}
+
+p {
+  color: #333;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-container .input-field {
+  transition: width 0.3s;
+}
+
+.password-icon {
+  top: 33%;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+  transition: transform 0.3s ease-in-out;
+}
+
+.password-icon:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+.password-container .input-field:focus {
+  width: 105%;
+}
+
+/*LOGIN PAGE END*/
+
+/* SIGN UP/REGISTER PAGE START*/
+
+.already-logged-in {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out; /* Add the transition */
+}
+
+.already-logged-in:hover {
+  transform: translateY(-3.2px);
+}
+
+.alr-signed-in-container {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-submit-register {
+  margin-top: 15px;
+}
+
+.register-box {
+  max-height: 487px;
+  height: 100%;
+}
+
+.register-header {
+  margin-top: 10px;
+}
+/*Register page end*/
+
+/*Timer component start*/
+.timer-container {
+  background-color: #30384b;
+  color: #eee;
+  padding-top: 50px;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timer-btn {
+  background-color: transparent;
+  color: rgb(255, 255, 255, 0.8);
+  border: 0;
+  display: inline-block;
+  width: 100px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.timer-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button.with-text {
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  line-height: 36px;
+}
+
+button.with-text svg {
+  width: 36px;
+  float: left;
+  margin-right: 5px;
+}
+/*Timer component end*/
+
+/*Settings modal START */
+
+.settings-modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(49, 49, 49, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.settings-modal-container {
+  max-width: 450px;
+  width: 100%;
+  background-color: #30384b;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.175);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-minutes-label,
+.break-minutes-label,
+.long-break-minutes-label,
+.intervals-label {
+  display: block;
+  text-transform: capitalize;
+}
+
+.break-minutes-label,
+.long-break-minutes-label,
+.intervals-label {
+  margin-top: 20px;
+}
+
+/*Settings modal END */
+
+/*Homepage START*/
+
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+.non-modal-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.homepage-timer-container {
+  background-color: #30384b;
+  color: #eee;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homepage-todo-list-container {
+  width: 500px;
+  margin-left: 80px;
+  margin-top: 72px;
+  color: #fff;
+}
+
+/*Homepage END*/
+
+/*Todo START*/
+/* Todo Container */
+.todo-container {
+  background-color: #353e51;
+  color: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.tasks-heading {
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: 0.3s;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+button.task-btn {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  color: rgb(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+/* Task Container */
+
+/* Task Item */
+.task-delete-btn {
+  font-size: 16px;
+  background-color: #cf352e;
+  color: rgb(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  padding: 10px;
+}
+
+.task-delete-btn:hover {
+  background-color: #eb3f36; /* Darker color on hover */
+  transform: scale(1.1);
+}
+.task-delete-btn:active {
+  transform: scale(1.2);
+}
+
+.task-holder {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  height: 40px;
+  padding: 5px 10px;
+}
+
+.task-container {
+  max-height: 35vh;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+.task-container::-webkit-scrollbar {
+  width: 6px; /* Adjust the width as needed */
+}
+
+.task-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Optional: add hover effects */
+.task-container:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Slightly visible on hover */
+}
+/*Todo END*/
+
+/*navbar START*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: transparent;
+  color: black;
+  border-bottom: none; /* Ensure no border */
+  box-shadow: none; /* Ensure no shadow */
+  height: 80px;
+  font-weight: 300;
+}
+
+.logo svg {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a,
+.navbar span {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.navbar a:hover,
+.navbar span:hover {
+  color: #ddd;
+}
+
+/*nav END*/
+
+/*History Start*/
+.history-modal-container {
+  max-width: 550px;
+  width: 100%;
+  background-color: #30384b;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.175);
+  border-radius: 8px;
+
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-header-container {
+  background-color: #3e4964;
+  width: 100%;
+  height: 10%;
+  border-radius: 8px;
+}
+
+.history-h1 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 32;
+  margin-bottom: 15px;
+}
+
+.session-container {
+  max-height: 500px;
+  min-height: 500px;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  padding: 5px;
+  padding-top: 20px;
+}
+.session-container::-webkit-scrollbar {
+  width: 6px; /* Adjust the width as needed */
+}
+
+.session-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.session-container::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Optional: add hover effects */
+.session-container:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Slightly visible on hover */
+}
+
+.session-holder {
+  width: 350px;
+  border-radius: 10px;
+  height: 115px;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.175);
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+}
+
+.session-holder:hover {
+  transform: scale(1.005);
+}
+
+.session-date-container {
+  height: 52.5px;
+  display: flex;
+  border-top-left-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.session-length-container {
+  height: 52.5px;
+  display: flex;
+  border-bottom-left-radius: 10px;
+}
+
+.date-label {
+  background-color: #02ec88;
+  width: 25%;
+  height: 100%;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 18px;
+  color: black;
+}
+
+.length-label {
+  background-color: #02ec88;
+  width: 25%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 18px;
+  color: black;
+}
+
+.date-value-container {
+  color: black;
+  font-weight: 200px;
+  font-size: 32px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.length-value-container {
+  color: black;
+  font-weight: 200px;
+  font-size: 32px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-and-del-button-holder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.session-delete-btn {
+  margin-left: 30px;
+  height: auto;
+}
