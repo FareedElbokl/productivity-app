@@ -2,7 +2,7 @@ Productivity Application
 
 ## Project Description
 
-This is a full-stack productivity application built using PostgreSQL, Express.js, React and Node.js. The application allows users to add, delete, and manage tasks with a customizable timer feature for productivity. It includes secure authentication using JSON Web Tokens (JWT).
+This is a full-stack productivity application built using PostgreSQL, Express.js, React and Node.js. The application allows users to add, delete, and manage tasks with a customizable timer feature for productivity. It includes login/registration and secure authentication using JSON Web Tokens (JWT).
 
 ## Features
 
