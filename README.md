@@ -1,4 +1,4 @@
-### Productivity Application
+# Productivity Application
 
 ## Project Description
 
@@ -34,26 +34,26 @@ Ensure you have the following installed on your local machine:
 
 To run the application locally, follow these steps:
 
-# Clone the repository:
+#### Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/productivity-app.git
 cd productivity-app
 ```
 
-# Install server dependencies
+#### Install server dependencies
 ```bash
 cd server
 npm install
 ```
 
-# Install client dependencies
+#### Install client dependencies
 ```bash
 cd ../client
 npm install
 ```
 
-# Set up environment variables:
+#### Set up environment variables:
 
 Create a .env file in the server directory with the following variables:
 env
@@ -61,18 +61,18 @@ JWT_SECRET=your_jwt_secret_here
 POSTGRES_PASSWORD=your_postgres_password_here
 Ensure not to commit this file to version control by adding it to .gitignore.
 
-# Start the server
+#### Start the server
 ```bash
 cd ../server
 npm start
 ```
 
-# Start the client (in a separate terminal)
+#### Start the client (in a separate terminal)
 ```bash
 cd ../client
 npm start
 ```
-# Access the application:
+#### Access the application:
 Open your browser and navigate to http://localhost:3000 to use the Productivity Application.
 
 
