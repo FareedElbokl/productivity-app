@@ -36,10 +36,11 @@ To run the application locally, follow these steps:
 
 Clone the repository:
 
-bash
-Copy code
+```bash
 git clone https://github.com/your-username/productivity-app.git
 cd productivity-app
+```
+
 Install dependencies:
 
 bash
